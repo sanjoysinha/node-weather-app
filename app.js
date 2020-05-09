@@ -3,17 +3,6 @@ const geocode = require('./utils/geocode')
 const express = require('express')
 const app = express()
 
-// geocode('Philadelphia',(error ,data)=>{
-// console.log('Error', error)    
-// console.log(data);
-    
-//     location(data.latitude, data.longitude,(error,data)=>{
-//     console.log(error);
-//     console.log(data)
-// })
-
-
-// })
 
 app.get('/weather',(req,res)=>{
 
