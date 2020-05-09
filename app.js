@@ -2,6 +2,7 @@ const location = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 3000
 
 
 app.get('/weather',(req,res)=>{
@@ -26,17 +27,7 @@ geocode(req.query.address,(error,data)=>{
 
 })
 
-
-
-
-
-
-
-
-
-
-
-var server = app.listen(3000,()=>{
+var server = app.listen(port,()=>{
 var host = server.address().address;
 var port = server.address().port
 console.log(`Server is listening on host ${host} and port ${port}`)
